@@ -316,4 +316,110 @@ Sparklines are small charts displayed inside a single cell to show trends in dat
 **Important Note:**  
 Sparklines provide a quick visual summary while taking up very little space.
 
+---
 
+## Lookup & Reference Functions
+
+### VLOOKUP
+
+**Purpose:**  
+Looks for a value in the first column of a table and returns a related value from another column in the same row.
+
+**Syntax:**  
+=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+
+**Example:**  
+=VLOOKUP(A2,$F$2:$H$20,3,FALSE)
+
+**Important Notes:**
+- The lookup value must be in the first column of the selected table.
+- VLOOKUP searches vertically.
+- FALSE is used for an exact match.
+- TRUE is used for an approximate match.
+
+
+### HLOOKUP
+
+**Purpose:**  
+Looks for a value in the first row of a table and returns a related value from another row in the same column.
+
+**Syntax:**  
+=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])
+
+**Example:**  
+=HLOOKUP(B1,$B$5:$H$8,3,FALSE)
+
+**Important Notes:**
+- HLOOKUP searches horizontally.
+- The lookup value must be in the first row of the selected table.
+- FALSE is used for an exact match.
+
+
+### XLOOKUP
+
+**Purpose:**  
+Searches for a value in one range and returns the corresponding value from another range.
+
+**Syntax:**  
+=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])
+
+**Example:**  
+=XLOOKUP(A2,F2:F20,H2:H20,"Not Found")
+
+**Important Notes:**
+- XLOOKUP can search vertically or horizontally.
+- The lookup range and return range are specified separately.
+- It can return a custom result when the value is not found.
+- It is more flexible than VLOOKUP and HLOOKUP.
+
+
+### MATCH
+
+**Purpose:**  
+Returns the position of a value within a range.
+
+**Syntax:**  
+=MATCH(lookup_value, lookup_array, [match_type])
+
+**Example:**  
+=MATCH(A2,F2:F20,0)
+
+**Important Notes:**
+- MATCH returns a position, not the actual value.
+- 0 is used for an exact match.
+
+
+### INDEX
+
+**Purpose:**  
+Returns the value from a specific position in a range.
+
+**Syntax:**  
+=INDEX(array, row_num, [column_num])
+
+**Example:**  
+=INDEX(H2:H20,5)
+
+**Important Notes:**
+- INDEX returns a value based on its position.
+- INDEX and MATCH can be combined to perform flexible lookups.
+
+
+### INDEX + MATCH
+
+**Purpose:**  
+INDEX and MATCH can be combined to look up a value without depending on the lookup column being the first column.
+
+**Syntax:**  
+=INDEX(return_range,MATCH(lookup_value,lookup_range,0))
+
+**Example:**  
+=INDEX(H2:H20,MATCH(A2,F2:F20,0))
+
+**How It Works:**
+
+1. MATCH finds the position of the lookup value.
+2. INDEX uses that position to return the corresponding value.
+
+**Important Note:**  
+INDEX + MATCH is more flexible than traditional VLOOKUP because the lookup range and return range can be in different columns.
