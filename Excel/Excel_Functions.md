@@ -423,3 +423,331 @@ INDEX and MATCH can be combined to look up a value without depending on the look
 
 **Important Note:**  
 INDEX + MATCH is more flexible than traditional VLOOKUP because the lookup range and return range can be in different columns.
+
+
+---
+
+# Excel Functions
+
+## Date & Time Functions
+
+### DATE
+
+**Purpose:** Creates a date from year, month, and day.
+
+**Syntax:**
+`=DATE(year, month, day)`
+
+**Important Note:** Used to create a valid Excel date.
+
+---
+
+### TIME
+
+**Purpose:** Creates a time from hour, minute, and second.
+
+**Syntax:**
+`=TIME(hour, minute, second)`
+
+**Important Note:** Used to create a valid Excel time.
+
+---
+
+### DAY
+
+**Purpose:** Extracts the day number from a date.
+
+**Syntax:**
+`=DAY(serial_number)`
+
+**Returns:** A number from 1 to 31.
+
+---
+
+### MONTH
+
+**Purpose:** Extracts the month number from a date.
+
+**Syntax:**
+`=MONTH(serial_number)`
+
+**Returns:** A number from 1 to 12.
+
+---
+
+### YEAR
+
+**Purpose:** Extracts the year from a date.
+
+**Syntax:**
+`=YEAR(serial_number)`
+
+---
+
+### SECOND
+
+**Purpose:** Extracts the seconds from a time.
+
+**Syntax:**
+`=SECOND(serial_number)`
+
+**Returns:** A number from 0 to 59.
+
+---
+
+### MINUTE
+
+**Purpose:** Extracts the minutes from a time.
+
+**Syntax:**
+`=MINUTE(serial_number)`
+
+**Returns:** A number from 0 to 59.
+
+---
+
+### NOW
+
+**Purpose:** Returns the current date and time.
+
+**Syntax:**
+`=NOW()`
+
+**Important Note:** The result updates when Excel recalculates.
+
+---
+
+### TODAY
+
+**Purpose:** Returns the current date.
+
+**Syntax:**
+`=TODAY()`
+
+**Important Note:** Returns the date without the current time.
+
+---
+
+### EDATE
+
+**Purpose:** Returns a date a specified number of months before or after a starting date.
+
+**Syntax:**
+`=EDATE(start_date, months)`
+
+**Important Note:** Positive numbers move forward; negative numbers move backward.
+
+---
+
+### DATEDIF
+
+**Purpose:** Calculates the difference between two dates in years, months, or days.
+
+**Syntax:**
+`=DATEDIF(start_date, end_date, unit)`
+
+**Common Units:**
+
+* `"Y"` → Complete years
+* `"M"` → Complete months
+* `"D"` → Complete days
+
+**Important Note:** The start date must be earlier than or equal to the end date.
+
+---
+
+### WORKDAY.INTL
+
+**Purpose:** Calculates a future or past working date while allowing custom weekends and holidays.
+
+**Syntax:**
+`=WORKDAY.INTL(start_date, days, [weekend], [holidays])`
+
+**Important Note:** Useful for calculating deadlines based on working days.
+
+---
+
+### NETWORKDAYS.INTL
+
+**Purpose:** Calculates the number of working days between two dates while allowing custom weekends and holidays.
+
+**Syntax:**
+`=NETWORKDAYS.INTL(start_date, end_date, [weekend], [holidays])`
+
+**Important Note:** Useful for calculating working days between two dates.
+
+---
+
+### WEEKDAY
+
+**Purpose:** Returns the day of the week as a number.
+
+**Syntax:**
+`=WEEKDAY(serial_number, [return_type])`
+
+**Important Note:** `return_type` determines which day is considered the first day of the week.
+
+---
+
+### WEEKNUM
+
+**Purpose:** Returns the week number of a specific date.
+
+**Syntax:**
+`=WEEKNUM(serial_number, [return_type])`
+
+**Important Note:** Useful for grouping and analyzing data by week.
+
+---
+
+## Text Functions
+
+### TEXT
+
+**Purpose:** Converts a number or date into text using a specified format.
+
+**Syntax:**
+`=TEXT(value, format_text)`
+
+**Important Note:** The result is text, not a numeric value.
+
+---
+
+### TRIM
+
+**Purpose:** Removes extra spaces from text, leaving only single spaces between words.
+
+**Syntax:**
+`=TRIM(text)`
+
+**Important Note:** Useful for cleaning imported or manually entered data.
+
+---
+
+### LEN
+
+**Purpose:** Counts the number of characters in a text string.
+
+**Syntax:**
+`=LEN(text)`
+
+**Important Note:** Spaces are counted as characters.
+
+---
+
+### FIND
+
+**Purpose:** Finds the position of one text string inside another text string.
+
+**Syntax:**
+`=FIND(find_text, within_text, [start_num])`
+
+**Important Note:** `FIND` is case-sensitive.
+
+---
+
+### SUBSTITUTE
+
+**Purpose:** Replaces specific text with new text.
+
+**Syntax:**
+`=SUBSTITUTE(text, old_text, new_text, [instance_num])`
+
+**Important Note:** Can replace all occurrences or a specific occurrence.
+
+---
+
+### TEXTSPLIT
+
+**Purpose:** Splits text into multiple cells using a delimiter.
+
+**Syntax:**
+`=TEXTSPLIT(text, col_delimiter, [row_delimiter])`
+
+**Important Note:** Useful for separating combined text into different cells.
+
+---
+
+### TEXTBEFORE
+
+**Purpose:** Returns the text that appears before a specified delimiter.
+
+**Syntax:**
+`=TEXTBEFORE(text, delimiter)`
+
+---
+
+### TEXTAFTER
+
+**Purpose:** Returns the text that appears after a specified delimiter.
+
+**Syntax:**
+`=TEXTAFTER(text, delimiter)`
+
+---
+
+### LEFT
+
+**Purpose:** Extracts a specified number of characters from the beginning of a text string.
+
+**Syntax:**
+`=LEFT(text, [num_chars])`
+
+---
+
+### RIGHT
+
+**Purpose:** Extracts a specified number of characters from the end of a text string.
+
+**Syntax:**
+`=RIGHT(text, [num_chars])`
+
+---
+
+### MID
+
+**Purpose:** Extracts a specified number of characters from the middle of a text string.
+
+**Syntax:**
+`=MID(text, start_num, num_chars)`
+
+---
+
+### CONCAT
+
+**Purpose:** Combines text from multiple cells or text strings into one text string.
+
+**Syntax:**
+`=CONCAT(text1, [text2], ...)`
+
+**Important Note:** Does not automatically add spaces or separators.
+
+---
+
+### UPPER
+
+**Purpose:** Converts text to uppercase letters.
+
+**Syntax:**
+`=UPPER(text)`
+
+---
+
+### LOWER
+
+**Purpose:** Converts text to lowercase letters.
+
+**Syntax:**
+`=LOWER(text)`
+
+---
+
+### PROPER
+
+**Purpose:** Capitalizes the first letter of each word.
+
+**Syntax:**
+`=PROPER(text)`
+
+**Important Note:** Useful for formatting names and text.
+
