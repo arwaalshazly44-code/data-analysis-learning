@@ -15,3 +15,16 @@ The task includes:
 **SQL Code:**  
 [View SQL File](./HOSPITAL.sql)
 
+
+### Online 108 Database – SQL Practice
+
+**Task:**
+Design and implement the Online 108 database according to the given requirements, including its tables, relationships, keys, constraints, and sample data.
+
+**Database Diagram:**
+
+![Online 108 Database Diagram](./Diagrams/ONLINE_108.png)
+
+**SQL Code:**
+[View SQL File](./SQL_Online108.sql)
+
