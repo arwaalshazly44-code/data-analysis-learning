@@ -13,4 +13,4 @@ The task includes:
 ![Hospital Database Diagram](./Diagrams/HOSPITAL.png)
 
 **SQL Code:**  
-[View SQL File](./HOSPITAL.sql)
+[View SQL File](SQL/Practice/HOSPITAL.sql)
