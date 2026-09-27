@@ -51,7 +51,7 @@ The task includes:
 
 **Database Diagram:**
 
-![Workshop Airport Database Diagram](./Diagrams/WORKSHOP.png)
+![Workshop Airport Database Diagram](./Diagrams/AIRPORT.png)
 
 **SQL Code:**
 [View SQL File](./WORKSHOP.sql)
