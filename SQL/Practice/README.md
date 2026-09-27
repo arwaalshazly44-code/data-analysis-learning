@@ -28,3 +28,33 @@ Design and implement the Online 108 database according to the given requirements
 **SQL Code:**
 [View SQL File](./SQL_Online108.sql)
 
+
+### Workshop – Airport Management System – DDL & DML
+
+**Task:**
+Design and implement an Airport Management System database using SQL Server to manage airport operations.
+
+The database includes:
+
+* Departments and managers.
+* Planes and their details.
+* Pilots and their licenses.
+* Flights and flight details.
+* Passengers and flight reservations.
+
+The task includes:
+
+* Creating tables and relationships.
+* Defining primary keys, foreign keys, and constraints.
+* Inserting sample data using DML.
+* Drawing the database relationship diagram.
+
+**Database Diagram:**
+
+![Workshop Airport Database Diagram](./Diagrams/WORKSHOP.png)
+
+**SQL Code:**
+[View SQL File](./WORKSHOP.sql)
+
+
+
